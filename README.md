@@ -1,6 +1,8 @@
 # App-Contador
 O app é um contador regressivo de dias, horas, minutos e segundos a escolha do usuário. Aplicativo baseado no repositório app-ideas de Florin Pop.
 
+**Pré-visualização:**
+
 **Nível:** 1-Iniciante
 
 We all have important events we look forward to in life, birthdays,
