@@ -37,7 +37,7 @@ function AtualizarContagem(){
     
                 dataCorrente.setSeconds(dataCorrente.getSeconds() + 1);
             }else{
-                alert("ACABOU!!!")
+                alert("IT'S DONE!!!")
                 PararContagem(timer);
             }
         }else{
