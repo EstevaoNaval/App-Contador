@@ -29,7 +29,8 @@ function AtualizarContagem(){
                 horas = Math.floor(variacaoData % 24);
     
                 dias = Math.floor(variacaoData/24)
-    
+                
+                document.querySelector("#outputNameEvent").innerHTML = inputName.value;
                 document.querySelector("#outputDay").innerHTML = dias;
                 document.querySelector("#outputHour").innerHTML = horas;
                 document.querySelector("#outputMinute").innerHTML = minutos;
@@ -48,9 +49,15 @@ function AtualizarContagem(){
 
     function PararContagem(Timer){
         clearInterval(Timer);
+        
         inputData.value = "";
         inputHora.value = "";
         inputName.value = "";
+
+        document.querySelector("#outputDay").innerHTML = "000";
+        document.querySelector("#outputHour").innerHTML = "00";
+        document.querySelector("#outputMinute").innerHTML = "00";
+        document.querySelector("#outputSecond").innerHTML = "00";
     }
 
     var timer = setInterval(Contar, 1000);

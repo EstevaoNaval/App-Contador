@@ -17,6 +17,10 @@
                 <h4>Contador regressivo básico</h4>
             </div>
             <div class="card-body">
+                <div class="mx-auto">
+                    <h3 id="outputNameEvent"><strong>Evento</strong></h3>
+                </div><br>
+
                 <div class="row display-4">
                     <div class="col-lg-3 col-sm-3 col-md-3 mx-auto">
                         <h3>Dias</h3>
@@ -38,10 +42,10 @@
 
                 <div class="form-group">
                     <div class="row">
-                        <input type="date" id="inputDate" class="form-control col-5 mx-auto" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}">
-                        <input type="time" id="inputHour" class="form-control col-5 mx-auto" placeholder="Hora desejada">
+                        <input type="date" id="inputDate" class="form-control col-5 mx-auto" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}" required>
+                        <input type="time" id="inputHour" class="form-control col-5 mx-auto" placeholder="Hora desejada" type="hidden" value="00:00">
                     </div><br>
-                    <input type="text" id="inputName" class="form-control col-12 mx-auto" placeholder="Nome"><br>
+                    <input type="text" id="inputName" class="form-control col-12 mx-auto" placeholder="Nome do evento"><br>
                     <button class="btn btn-outline-dark form-control col-12 mx-auto" onclick="AtualizarContagem()">Start</button>
                 </div>
             </div>
