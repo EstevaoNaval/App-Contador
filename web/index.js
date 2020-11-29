@@ -38,8 +38,10 @@ function AtualizarContagem(){
     
                 dataCorrente.setSeconds(dataCorrente.getSeconds() + 1);
             }else{
-                alert("IT'S DONE!!!")
+                TocarAlarme();
                 PararContagem(timer);
+                alert(`Uhuuu!!! ${inputName.value} has arrived.`)
+                LimparValoresTela();
             }
         }else{
             alert("Digite uma data, hora e/ou nome válido");
@@ -49,7 +51,9 @@ function AtualizarContagem(){
 
     function PararContagem(Timer){
         clearInterval(Timer);
-        
+    }
+
+    function LimparInputEOutput(){
         inputData.value = "";
         inputHora.value = "";
         inputName.value = "";
@@ -58,6 +62,11 @@ function AtualizarContagem(){
         document.querySelector("#outputHour").innerHTML = "00";
         document.querySelector("#outputMinute").innerHTML = "00";
         document.querySelector("#outputSecond").innerHTML = "00";
+    }
+
+    function TocarAlarme(){
+        let Alarme = document.querySelector("audio");
+        Alarme.play();
     }
 
     var timer = setInterval(Contar, 1000);
